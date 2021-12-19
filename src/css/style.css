@@ -1,0 +1,146 @@
+/* RESET */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+ul[class],
+ol[class] {
+	list-style: none;
+	padding: 0;
+}
+
+body {
+	min-block-size: 100vh;
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-inline-size: 100%;
+	object-fit: cover;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+figcaption {
+	max-inline-size: 60ch;
+}
+
+/* BASIC STYLING */
+:root {
+	--clr-neutral-700: hsl(227, 35%, 25%);
+	--clr-neutral-500: hsl(225, 20%, 60%);
+	--clr-neutral-400: hsl(223, 50%, 87%);
+	--clr-neutral-300: hsl(224, 65%, 95%);
+	--clr-neutral-200: hsl(230, 100%, 99%);
+	--clr-neutral-100: hsl(0, 0%, 100%);
+
+	--clr-accent-cta400: hsl(226, 100%, 87%);
+	--clr-accent-discount500: hsl(15, 100%, 70%);
+	--clr-accent-discount400: hsl(14, 92%, 95%);
+	--clr-accent-slider500: hsl(174, 86%, 45%);
+	--clr-accent-slider400: hsl(174, 77%, 80%);
+
+	--font-fam-primary: 'Manrope', sans-serif;
+
+	--font-size-700: 2.5rem; /* 40 px */
+	--font-size-600: 1.75rem; /* 28 px */
+
+	--font-size-400: 0.94rem; /* 15 px */
+	--font-size-300: 0.875rem; /* 14 px */
+	--font-size-200: 0.75rem; /* 12 px */
+
+	--font-weight-800: 800;
+	--font-weight-600: 600;
+
+	/* HELPER CLASSES */
+	--box-shadow-100: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+
+	--spacer-100: 1rem;
+}
+
+body {
+	position: relative;
+	z-index: 0;
+	background-color: var(--clr-neutral-100);
+
+	font-family: var(--font-fam-primary);
+	font-size: var(--font-size-400);
+	font-weight: var(--font-weight-600);
+	color: var(--clr-neutral-500);
+}
+
+.img {
+	position: absolute;
+	inline-size: 100%;
+	block-size: 450px;
+	background: url('../../images/bg-pattern.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	z-index: -1;
+}
+
+.header {
+	inline-size: 100%;
+	block-size: 25vh;
+	display: grid;
+	margin: auto;
+
+	background: url('../../images/pattern-circles.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	object-fit: cover;
+}
+
+.header > h1 {
+	position: relative;
+	font-size: var(--font-size-600);
+	color: var(--clr-neutral-700);
+	margin: auto;
+	text-align: center;
+}
+
+.header__secondary {
+	font-size: var(--font-size-400);
+	color: var(--clr-neutral-500);
+}
+
+/* FOOTER */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="src/css/style.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Interactive pricing component</title>
+	</head>
+	<body>
+		<div class="img"></div>
+		<!-- Header -->
+		<header class="header">
+			<h1>
+				Simple, traffic-based pricing <br /><span
+					class="header__secondary"
+					>Sign-up for our 30-day trial. No credit card
+					required.</span
+				>
+			</h1>
+		</header>
+
+		<!-- Main content -->
+		<main class="card">
+			<div class="card__header">
+				<h2>Pageviews</h2>
+				<div aria-labelledby="Monthly payment" class="js-output">
+					$ /month
+				</div>
+			</div>
+			<label></label>
+			<form>
+				<input
+					type="range"
+					min="0"
+					max="1000000"
+					value="10"
+					class="slider"
+					id="js_slider"
+				/>
+				<div class="billing">
+					<label class="toggle-label"
+						>Monthly Billing
+						<input type="checkbox" checked />
+						<span class="toggle"></span>
+					</label>
+					<div class="discount">
+						Yearly Billing
+						<span class="discount__span">25% discount</span>
+					</div>
+				</div>
+			</form>
+			<footer aria-label="primary">
+				<ul class="footer-list">
+					<li>Unlimited websites</li>
+					<li>100% data ownership</li>
+					<li>Email reports</li>
+				</ul>
+				<button class="trial-button">Start my trial</button>
+			</footer>
+		</main>
+
+		<!-- Footer with author attribution -->
+		<footer aria-label="secondary">
+			<small class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Helena Plantin</a>.
+			</small>
+		</footer>
+	</body>
+</html>
