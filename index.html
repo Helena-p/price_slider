@@ -33,7 +33,7 @@
 			</h1>
 		</header>
 
-		<!-- Main content -->
+		<!-- Card component -->
 		<main class="card">
 			<div class="card__header">
 				<h2 class="js-views">100K Pageviews</h2>
@@ -41,21 +41,24 @@
 					<span class="js-prize">$16.00</span>
 					/ month
 				</div>
+				<form aria-label="primary">
+					<label aria-labelledby="Price slider" for="slider"></label>
+					<input
+						type="range"
+						min="0"
+						max="1000000"
+						value="10"
+						class="slider js-slider"
+						id="slider"
+					/>
+				</form>
 			</div>
-			<label></label>
-			<form>
-				<input
-					type="range"
-					min="0"
-					max="1000000"
-					value="10"
-					class="slider"
-					id="js_slider"
-				/>
+
+			<form aria-label="secondary">
 				<div class="billing">
-					<label class="toggle-label"
+					<label for="checkbox" class="toggle-label"
 						>Monthly Billing
-						<input type="checkbox" checked />
+						<input type="checkbox" checked id="checkbox" />
 						<span class="toggle"></span>
 					</label>
 					<div class="discount">
