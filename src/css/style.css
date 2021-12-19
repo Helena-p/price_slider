@@ -319,7 +319,27 @@ input:checked + .toggle:before {
 	color: var(--clr-neutral-100);
 }
 
+hr {
+	inline-size: 100%;
+	block-size: 1px;
+	border: none;
+	background-color: var(--clr-neutral-300);
+}
+
 /* FOOTER */
+.footer-list {
+	font-size: var(--font-size-200);
+}
+
+.footer-list > * + * {
+	margin-top: 0.6rem;
+}
+
+.footer-list > li::before {
+	content: url('../../images/icon-check.svg');
+	margin-right: 1rem;
+}
+
 .footer-secondary {
 	position: absolute;
 	bottom: 0.5rem;
