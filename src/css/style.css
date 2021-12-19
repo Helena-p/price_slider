@@ -232,6 +232,7 @@ body {
 	block-size: 2.5rem;
 	border-radius: 50%;
 	background: var(--clr-accent-slider400);
+	border: none;
 	cursor: pointer;
 }
 
@@ -240,6 +241,7 @@ body {
 	block-size: 2.5rem;
 	border-radius: 50%;
 	background: var(--clr-accent-slider400);
+	border: none;
 	cursor: pointer;
 }
 
@@ -346,6 +348,7 @@ input:checked + .toggle:before {
 	padding: 0.75rem 2.8rem;
 	background-color: var(--clr-neutral-700);
 	color: var(--clr-accent-cta400);
+	border: none;
 	border-radius: 20px;
 }
 
