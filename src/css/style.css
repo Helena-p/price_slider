@@ -186,6 +186,38 @@ body {
 	padding-right: 0.6rem;
 }
 
+/* PRICE SLIDER */
+.card__header > form {
+	inline-size: 100%;
+	padding: 1.5rem 0;
+}
+.slider {
+	-webkit-appearance: none;
+	appearance: none;
+	inline-size: 100%;
+	block-size: 0.5rem;
+	background: var(--clr-neutral-300);
+	border-radius: 0.625rem;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	inline-size: 2.5rem;
+	block-size: 2.5rem;
+	border-radius: 50%;
+	background: var(--clr-accent-slider500);
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	inline-size: 2.5rem;
+	block-size: 2.5rem;
+	border-radius: 50%;
+	background: var(--clr-accent-slider500);
+	cursor: pointer;
+}
+
 /* FOOTER */
 .footer-secondary {
 	position: absolute;
