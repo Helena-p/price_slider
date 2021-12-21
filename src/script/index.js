@@ -1,11 +1,22 @@
 'use strict';
 
-const slider = document.querySelector('.js-slider');
+const slider = document.querySelector('.js_slider');
+const numberOfViews = document.querySelector('.js_views');
 
 // set the color of slider
 const settings = {
 	fill: '#a4f3eb',
 	background: '#ecf0fb',
+};
+
+slider.oninput = function () {
+	if (this.value === slider.max) {
+		return (numberOfViews.innerText = '1M');
+	} else {
+		return (numberOfViews.innerText = `${Math.floor(
+			Math.round(this.value / 100) / 10
+		)}K Pageviews`);
+	}
 };
 
 function applyFill(slider) {
