@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Live Site URL: [helena-p.github.io/price_slider](https://helena-p.github.io/price_slider/)
 
 ## My process
 
@@ -45,6 +45,8 @@ Users should be able to:
 -   JavaScript
 
 ### What I learned
+
+I discovered that if you do not want the default styling of an input range then, there is no easy road to custom styling with cross-browser support. W3C had good documentation on this, except how to accomplish the slider's lower fill. I found a thread on Stack Overflow that solved this by using a 90-degree linear gradient based on the input value.
 
 ### Continued development
 
