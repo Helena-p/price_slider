@@ -16,9 +16,9 @@ function applyFill(slider) {
 	// Linear gradient separator at the above point
 	// where background color change
 	const bg = `linear-gradient(90deg, ${settings.fill} ${percentage}%, ${
-		settings.background
+		settings.backgroundColor
 	} ${percentage + 0.1}%)`;
-	slider.style.background = bg;
+	slider.style.backgroundColor = bg;
 }
 
 applyFill(slider);
