@@ -9,16 +9,6 @@ const settings = {
 	background: '#ecf0fb',
 };
 
-slider.oninput = function () {
-	if (this.value === slider.max) {
-		return (numberOfViews.innerText = '1M');
-	} else {
-		return (numberOfViews.innerText = `${Math.floor(
-			Math.round(this.value / 100) / 10
-		)}K Pageviews`);
-	}
-};
-
 function applyFill(slider) {
 	// Turn value into percentage to figure out how far
 	// it is in between the min and max of input
@@ -32,8 +22,6 @@ function applyFill(slider) {
 	slider.style.background = bg;
 }
 
-applyFill(slider);
-
 // If event is slider display lower track fill
 function displayFill(e) {
 	if (e.target !== slider) return;
@@ -41,4 +29,36 @@ function displayFill(e) {
 	applyFill(e.target);
 }
 
-document.addEventListener('input', displayFill);
+// Helper function to round input value in 100k
+function roundingValues(val) {
+	let roundedValue = Math.floor(Math.round(val / 100) / 10);
+	return roundedValue;
+}
+
+// Display range of pageviews in 100s K or if max value as 1M
+slider.oninput = function () {
+	if (this.value === slider.max) {
+		return (numberOfViews.innerText = '1M Pageviews');
+	} else {
+		return (numberOfViews.innerText = `${roundingValues(
+			this.value
+		)}K Pageviews`);
+	}
+};
+
+function calculatePrice(e) {
+	const priceEl = document.querySelector('.js_price');
+	let views = roundingValues(e.target.value);
+
+	if (views >= 10 && views < 50) return (priceEl.innerText = '$08.00');
+	if (views >= 50 && views < 100) return (priceEl.innerText = '$12.00');
+	if (views >= 100 && views < 500) return (priceEl.innerText = '$16.00');
+	if (views >= 500 && views < 1000) return (priceEl.innerText = '$24.00');
+	if ((views = 1000)) return (priceEl.innerText = '$36.00');
+}
+
+applyFill(slider);
+document.addEventListener('input', (e) => {
+	displayFill(e);
+	calculatePrice(e);
+});
