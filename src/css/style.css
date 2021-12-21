@@ -55,19 +55,6 @@ figcaption {
 	max-inline-size: 60ch;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
-/**
- * Disable smooth scrolling when users have prefers-reduced-motion enabled
- */
-@media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
-}
-
 /* BASIC STYLING */
 :root {
 	--clr-neutral-700: hsl(227, 35%, 25%);
