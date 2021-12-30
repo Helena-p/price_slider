@@ -1,13 +1,14 @@
-'use strict';
-
 const slider = document.querySelector('.js_slider');
+const checkbox = document.querySelector('.js_checkbox');
 const numberOfViews = document.querySelector('.js_views');
 
 // set the color of slider
-const settings = {
+const sliderTrack = {
 	fill: '#a4f3eb',
 	background: '#ecf0fb',
 };
+
+//import options from './priceOptions'
 
 function applyFill(slider) {
 	// Turn value into percentage to figure out how far
@@ -16,49 +17,53 @@ function applyFill(slider) {
 		(100 * (slider.value - slider.min)) / (slider.max - slider.min);
 	// Linear gradient separator at the above point
 	// where background color change
-	const bg = `linear-gradient(90deg, ${settings.fill} ${percentage}%, ${
-		settings.background
+	const bg = `linear-gradient(90deg, ${sliderTrack.fill} ${percentage}%, ${
+		sliderTrack.background
 	} ${percentage + 0.1}%)`;
 	slider.style.background = bg;
 }
 
 // If event is slider display lower track fill
 function displayFill(e) {
-	if (e.target !== slider) return;
 	slider.innerHTML = e.target.value;
 	applyFill(e.target);
 }
 
-// Helper function to round input value in 100k
-function roundingValues(val) {
-	let roundedValue = Math.floor(Math.round(val / 100) / 10);
-	return roundedValue;
-}
-
-// Display range of pageviews in 100s K or if max value as 1M
+// Display range of pageviews in 100s K or 1M as max value
 slider.oninput = function () {
 	if (this.value === slider.max) {
-		return (numberOfViews.innerText = '1M Pageviews');
+		return (numberOfViews.textContent = '1M Pageviews');
 	} else {
-		return (numberOfViews.innerText = `${roundingValues(
-			this.value
-		)}K Pageviews`);
+		return (numberOfViews.textContent = `${this.value}K Pageviews`);
 	}
 };
 
-function calculatePrice(e) {
+// Apply discount if checkbox is checked
+// Not checked - display regular price
+function calculateDiscount(price) {
 	const priceEl = document.querySelector('.js_price');
-	let views = roundingValues(e.target.value);
 
-	if (views >= 10 && views < 50) return (priceEl.innerText = '$08.00');
-	if (views >= 50 && views < 100) return (priceEl.innerText = '$12.00');
-	if (views >= 100 && views < 500) return (priceEl.innerText = '$16.00');
-	if (views >= 500 && views < 1000) return (priceEl.innerText = '$24.00');
-	if ((views = 1000)) return (priceEl.innerText = '$36.00');
+	priceEl.textContent = checkbox.checked
+		? `$${price - price * (25 / 100)}.00`
+		: `$${price}.00`;
 }
 
+function getPrice(e) {
+	let views = e.target.value;
+
+	if (views >= 0 && views < 50) return calculateDiscount(8);
+	if (views >= 50 && views < 100) return calculateDiscount(12);
+	if (views >= 100 && views < 500) return calculateDiscount(16);
+	if (views >= 500 && views < 1000) return calculateDiscount(24);
+	if ((views = 1000)) return calculateDiscount(36);
+}
+
+// When user toggles slider - calculate fill to lower track
+// Use value to calculate price interval
 applyFill(slider);
-document.addEventListener('input', (e) => {
+slider.addEventListener('input', (e) => {
 	displayFill(e);
-	calculatePrice(e);
+	getPrice(e);
 });
+
+checkbox.addEventListener('change', calculateDiscount);
