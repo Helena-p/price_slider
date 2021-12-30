@@ -1,3 +1,5 @@
+//import options from './priceOptions'
+
 const slider = document.querySelector('.js_slider');
 const checkbox = document.querySelector('.js_checkbox');
 const numberOfViews = document.querySelector('.js_views');
@@ -7,8 +9,6 @@ const sliderTrack = {
 	fill: '#a4f3eb',
 	background: '#ecf0fb',
 };
-
-//import options from './priceOptions'
 
 function applyFill(slider) {
 	// Turn value into percentage to figure out how far
