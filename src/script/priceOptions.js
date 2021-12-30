@@ -1,4 +1,4 @@
-const options = [
+export const options = [
 	{
 		low: 0,
 		high: 50,
@@ -20,5 +20,3 @@ const options = [
 		price: 24,
 	},
 ];
-
-export default options;
