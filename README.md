@@ -1,7 +1,5 @@
 # Frontend Mentor - Interactive pricing component solution
 
-This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
 ## Table of contents
 
 -   [Overview](#overview)
@@ -16,6 +14,8 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 -   [Acknowledgments](#acknowledgments)
 
 ## Overview
+
+This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ### The challenge
 
@@ -36,6 +36,11 @@ Users should be able to:
 
 ## My process
 
+I planned the general layout by viewing the provided Figma wireframe. It seemed straightforward with one layout shift in mobile view. The position of the price element shifted from above the range slider on desktop, to below on mobile. The card elements could otherwise be positioned with Flexbox.<br>
+I had to read up on the styling input range and discovered it to be no easy task. I decided to customize the input range, to benefit from the default accessibility settings.<br>
+I discovered that if you do not want the default styling of an input range then, there is no easy road to custom styling with cross-browser support. W3C had good documentation on this, except how to accomplish the slider's lower fill. I found a thread on Stack Overflow that solved this by using a 90-degree linear gradient based on the input value.<br>
+The challenge is small in size, a landing page. I, therefore, decided to build the project with no build tools or framework, but instead use vanilla CSS and JavaScript.
+
 ### Built with
 
 -   Semantic HTML5 markup
@@ -46,10 +51,17 @@ Users should be able to:
 
 ### What I learned
 
-I discovered that if you do not want the default styling of an input range then, there is no easy road to custom styling with cross-browser support. W3C had good documentation on this, except how to accomplish the slider's lower fill. I found a thread on Stack Overflow that solved this by using a 90-degree linear gradient based on the input value.
+The biggest challenge was to fill the lower range track on a user event. I found a thread on Stack Overflow that solved the task by setting a linear gradient dynamically.
 
 ### Continued development
 
+-   Internationalisaion
+    I took the opportunity to get familiar with CSS logical properties for this project. It would then be a natural continued development to internationalise the project to other languages and currencies.
+-   Dark theme
+
 ### Useful resources
+
+-   W3C
+-   Stack Overflow
 
 ## Acknowledgments
