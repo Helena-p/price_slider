@@ -33,9 +33,9 @@
 		<!-- Card component -->
 		<main class="card">
 			<div class="card__header">
-				<h2 class="js_views">10K Pageviews</h2>
+				<h2 class="js_views">50K Pageviews</h2>
 				<div class="card__prize" aria-labelledby="Monthly payment">
-					<span class="js_price">$08.00</span>
+					<span class="js_price">$12.00</span>
 					/ month
 				</div>
 				<form aria-label="primary">
@@ -43,8 +43,8 @@
 					<input
 						type="range"
 						min="10"
-						max="1000000"
-						value="10"
+						max="1000"
+						value="50"
 						class="slider js_slider"
 						id="slider"
 					/>
@@ -55,7 +55,11 @@
 				<div class="billing">
 					<p>Monthly&nbsp;Billing</p>
 					<label for="checkbox" class="toggle-label">
-						<input type="checkbox" checked id="checkbox" />
+						<input
+							type="checkbox"
+							id="checkbox"
+							class="js_checkbox"
+						/>
 						<span class="toggle"></span>
 					</label>
 					<div class="discount">
@@ -87,6 +91,6 @@
 				>. Coded by <a href="#">Helena Plantin</a>.
 			</small>
 		</footer>
-		<script src="src/script/index.js"></script>
+		<script src="src/script/index.js" type="module"></script>
 	</body>
 </html>
