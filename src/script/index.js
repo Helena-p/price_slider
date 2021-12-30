@@ -55,15 +55,13 @@ function getPrice(e) {
 	if (views >= 50 && views < 100) return calculateDiscount(12);
 	if (views >= 100 && views < 500) return calculateDiscount(16);
 	if (views >= 500 && views < 1000) return calculateDiscount(24);
-	if ((views = 1000)) return calculateDiscount(36);
+	if (views == 1000) return calculateDiscount(36);
 }
 
 // When user toggles slider - calculate fill to lower track
 // Use value to calculate price interval
 applyFill(slider);
-slider.addEventListener('input', (e) => {
+document.addEventListener('input', (e) => {
 	displayFill(e);
 	getPrice(e);
 });
-
-checkbox.addEventListener('change', calculateDiscount);
