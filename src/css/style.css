@@ -159,7 +159,7 @@ body {
 	max-inline-size: 33.75rem;
 	min-block-size: 25rem;
 	border-radius: 8px;
-	padding: 2.5rem;
+	padding: 1.5rem 0.5rem;
 	margin: auto;
 
 	display: flex;
@@ -177,7 +177,17 @@ body {
 	gap: calc(var(--spacer) * 2);
 }
 
+@media only screen and (min-width: 22em) {
+	.card {
+		padding: 1.5rem;
+	}
+}
+
 @media only screen and (min-width: 36em) {
+	.card {
+		padding: 2.5rem;
+	}
+
 	.card > footer,
 	.card__header,
 	.card__prize {
