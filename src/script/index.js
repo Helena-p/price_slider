@@ -1,4 +1,4 @@
-//import options from './priceOptions'
+import { options } from './priceOptions.js';
 
 const slider = document.querySelector('.js_slider');
 const checkbox = document.querySelector('.js_checkbox');
@@ -51,11 +51,13 @@ function calculateDiscount(price) {
 function getPrice(e) {
 	let views = e.target.value;
 
-	if (views >= 0 && views < 50) return calculateDiscount(8);
-	if (views >= 50 && views < 100) return calculateDiscount(12);
-	if (views >= 100 && views < 500) return calculateDiscount(16);
-	if (views >= 500 && views < 1000) return calculateDiscount(24);
-	if (views == 1000) return calculateDiscount(36);
+	options.map((option) => {
+		if (views == 1000) {
+			return calculateDiscount(36);
+		} else if (views >= option.low && views < option.high) {
+			return calculateDiscount(option.price);
+		}
+	});
 }
 
 // When user toggles slider - calculate fill to lower track
