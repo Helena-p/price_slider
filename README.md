@@ -55,8 +55,8 @@ The biggest challenge was to fill the lower range track on a user event. I found
 
 ### Continued development
 
--   Internationalisaion
-    I took the opportunity to get familiar with CSS logical properties for this project. It would then be a natural continued development to internationalise the project to other languages and currencies.
+-   Internationalization<br>
+    I took the opportunity to get familiar with CSS logical properties for this project. It would then be a natural continued development to internationalize the project to other languages and currencies.
 -   Dark theme
 
 ### Useful resources
