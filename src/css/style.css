@@ -382,7 +382,6 @@ hr {
 	block-size: 1px;
 	border: none;
 	background-color: var(--clr-neutral-300);
-	padding-block-start: 1rem;
 }
 
 /* FOOTER */
