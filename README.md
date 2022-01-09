@@ -62,7 +62,7 @@ The biggest challenge was to fill the lower range track on a user event. I found
 
 #### Lighthouse Report
 
-![Lighthouse Report](./images/lighthouse.png)<br>
+![Lighthouse Report](images/lighthouse.png)<br>
 A lower score on accessibility is due to low contrast in the horizontal ruler. This could be corrected by increasing the contrast, but I decided to follow the design specification for the challenge.
 
 ### Continued development
