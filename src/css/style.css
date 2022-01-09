@@ -117,7 +117,7 @@ body {
 
 .header {
 	inline-size: 100%;
-	block-size: 30vh;
+	block-size: 29.5vh;
 	display: grid;
 	margin: auto;
 
@@ -130,7 +130,7 @@ body {
 .h-group {
 	position: relative;
 	margin: auto;
-	padding-block-start: 2rem;
+	padding-block-start: 1.2rem;
 	text-align: center;
 }
 .h-group > h1 {
