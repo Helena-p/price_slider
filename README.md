@@ -9,6 +9,7 @@
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
+    -   [Testing](#testing)
     -   [Continued development](#continued-development)
     -   [Useful resources](#useful-resources)
 -   [Acknowledgments](#acknowledgments)
@@ -52,6 +53,17 @@ The challenge is small in size, a landing page. I, therefore, decided to build t
 ### What I learned
 
 The biggest challenge was to fill the lower range track on a user event. I found a thread on Stack Overflow that solved the task by setting a linear gradient dynamically.
+
+### Testing
+
+[W3 HTML Validation](https://validator.w3.org/nu/#textarea) with no errors.<br>
+![W3 Validation](http://jigsaw.w3.org/css-validator/images/vcss)
+![W3 Validation](http://jigsaw.w3.org/css-validator/images/vcss-blue)
+
+#### Lighthouse Report
+
+![Lighthouse Report](./images/lighthouse.png)<br>
+A lower score on accessibility is due to low contrast in the horizontal ruler. This could be corrected by increasing the contrast, but I decided to follow the design specification for the challenge.
 
 ### Continued development
 
