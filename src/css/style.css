@@ -166,7 +166,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	gap: calc(var(--spacer) * 2.2);
+	gap: calc(var(--spacer) * 2.5);
 	box-shadow: var(--box-shadow-100);
 }
 
