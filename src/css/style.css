@@ -207,6 +207,8 @@ body {
 
 .card__prize {
 	order: 1;
+	display: flex;
+	align-items: center;
 }
 
 .card__prize > span {
