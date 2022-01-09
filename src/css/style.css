@@ -107,7 +107,7 @@ body {
 .img {
 	position: absolute;
 	inline-size: 100%;
-	block-size: 60vh;
+	block-size: 50vh;
 	background: url('../../images/bg-pattern.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -166,7 +166,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	gap: calc(var(--spacer) * 2);
+	gap: calc(var(--spacer) * 2.2);
 	box-shadow: var(--box-shadow-100);
 }
 
