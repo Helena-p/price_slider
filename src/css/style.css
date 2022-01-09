@@ -160,7 +160,7 @@ body {
 	max-inline-size: 33.75rem;
 	min-block-size: 25rem;
 	border-radius: 8px;
-	padding: 1.5rem 0.5rem;
+	padding: 2rem 0.5rem;
 	margin: auto;
 
 	display: flex;
@@ -205,11 +205,21 @@ body {
 	font-size: var(--font-size-400);
 }
 
+.card__prize {
+	order: 1;
+}
+
 .card__prize > span {
 	font-size: var(--font-size-700);
 	font-weight: var(--font-weight-800);
 	color: var(--clr-neutral-700);
 	padding-right: 0.6rem;
+}
+
+@media only screen and (min-width: 36em) {
+	.card__prize {
+		order: initial;
+	}
 }
 
 /* PRICE SLIDER */
