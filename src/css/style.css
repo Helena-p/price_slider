@@ -117,7 +117,7 @@ body {
 
 .header {
 	inline-size: 100%;
-	block-size: 29vh;
+	block-size: 30vh;
 	display: grid;
 	margin: auto;
 
@@ -140,11 +140,11 @@ body {
 
 .h-group > h2 {
 	font-size: clamp(var(--font-size-200), 5vw, var(--font-size-400));
-	font-weight: 400;
+	font-weight: var(--font-weight-600);
 	color: var(--clr-neutral-500);
 	line-height: 1.6;
 	inline-size: 22ch;
-	margin: 1rem auto;
+	margin: 0.5rem auto;
 }
 
 @media only screen and (min-width: 36em) {
