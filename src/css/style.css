@@ -88,7 +88,7 @@ figcaption {
 	--box-shadow-100: 0 1px 1px hsl(224, 65%, 95%), 0 2px 2px hsl(224, 65%, 95%),
 		0 4px 4px hsl(224, 65%, 95%), 0 8px 8px hsl(224, 65%, 95%),
 		0 16px 16px hsl(224, 65%, 95%);
-	--drop-shadow: --clr-accent-slider500;
+	--drop-shadow: var(--clr-accent-slider500);
 
 	--spacer: 1rem;
 }
