@@ -10,6 +10,8 @@ const sliderTrack = {
 	background: '#ecf0fb',
 };
 
+/* Credit - Stack Overflow thread on how to fill
+	background color dynamically */
 function applyFill(slider) {
 	// Turn value into percentage to figure out how far
 	// it is in between the min and max of input
