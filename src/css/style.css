@@ -166,7 +166,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	gap: calc(var(--spacer) * 2.5);
+	gap: calc(var(--spacer) * 2.2);
 	box-shadow: var(--box-shadow-100);
 }
 
@@ -369,6 +369,7 @@ input:checked + .toggle:before {
 	color: var(--clr-accent-cta400);
 	border: none;
 	border-radius: 20px;
+	cursor: pointer;
 }
 
 .trial-button:hover,
@@ -381,6 +382,7 @@ hr {
 	block-size: 1px;
 	border: none;
 	background-color: var(--clr-neutral-300);
+	padding-block-start: 1rem;
 }
 
 /* FOOTER */
