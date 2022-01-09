@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Solution URL: [Frontend Mentor Price Slider Solution](https://www.frontendmentor.io/solutions/interactive-pricing-component-CP7KeMA6v)
 -   Live Site URL: [helena-p.github.io/price_slider](https://helena-p.github.io/price_slider/)
 
 ## My process
@@ -65,3 +65,6 @@ The biggest challenge was to fill the lower range track on a user event. I found
 -   Stack Overflow
 
 ## Acknowledgments
+
+A big thank you to the FM Slack channel and in particular Grace Snow, Alex Marshall and Arca. Grace and Alex aided me in troubleshooting accessibility concerns regarding labels wrapping input fields. The correct markup is to use a aria-label in this situation, and not sr-only or aria-labelledby.<br>
+Arca assisted me in troubleshooting the display of the price when the slider was not moving. I called the calculateDiscount function in the eventlistener instead of the getPrice function. The calculateDiscount helper function is instead called in the getPrice function.
