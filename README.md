@@ -2,17 +2,20 @@
 
 ## Table of contents
 
--   [Overview](#overview)
-    -   [The challenge](#the-challenge)
-    -   [Screenshot](#screenshot)
-    -   [Links](#links)
--   [My process](#my-process)
-    -   [Built with](#built-with)
-    -   [What I learned](#what-i-learned)
-    -   [Testing](#testing)
-    -   [Continued development](#continued-development)
-    -   [Useful resources](#useful-resources)
--   [Acknowledgments](#acknowledgments)
+-   [Frontend Mentor - Interactive pricing component solution](#frontend-mentor---interactive-pricing-component-solution)
+    -   [Table of contents](#table-of-contents)
+    -   [Overview](#overview)
+        -   [The challenge](#the-challenge)
+        -   [Screenshot](#screenshot)
+        -   [Links](#links)
+    -   [My process](#my-process)
+        -   [Built with](#built-with)
+        -   [What I learned](#what-i-learned)
+        -   [Testing](#testing)
+            -   [Lighthouse Report](#lighthouse-report)
+        -   [Continued development](#continued-development)
+        -   [Useful resources](#useful-resources)
+    -   [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -33,7 +36,6 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Frontend Mentor Price Slider Solution](https://www.frontendmentor.io/solutions/interactive-pricing-component-CP7KeMA6v)
--   Live Site URL: [helena-p.github.io/price_slider](https://helena-p.github.io/price_slider/)
 
 ## My process
 
