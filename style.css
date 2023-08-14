@@ -108,7 +108,7 @@ body {
 	position: absolute;
 	inline-size: 100%;
 	block-size: 50vh;
-	background: url('../../images/bg-pattern.svg');
+	background: url('images/bg-pattern.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: left;
@@ -121,7 +121,7 @@ body {
 	display: grid;
 	margin: auto;
 
-	background: url('../../images/pattern-circles.svg');
+	background: url('images/pattern-circles.svg');
 	background-position: center;
 	background-repeat: no-repeat;
 	object-fit: cover;
@@ -257,7 +257,7 @@ body {
 	block-size: 2.5rem;
 	border-radius: 50%;
 	background: var(--clr-accent-slider500);
-	background-image: url('../../images/icon-slider.svg');
+	background-image: url('images/icon-slider.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	filter: drop-shadow(0 0.9rem 0.6rem var(--clr-accent-slider400));
@@ -405,7 +405,7 @@ hr {
 }
 
 .footer-list > li::before {
-	content: url('../../images/icon-check.svg');
+	content: url('images/icon-check.svg');
 	margin-right: 1rem;
 }
 
