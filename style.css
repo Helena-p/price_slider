@@ -244,7 +244,7 @@ body {
 	block-size: 2.5rem;
 	border-radius: 50%;
 	background: var(--clr-accent-slider500);
-	background-image: url('../../images/icon-slider.svg');
+	background-image: url('images/icon-slider.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	filter: drop-shadow(0 0.9rem 0.6rem var(--clr-accent-slider400));

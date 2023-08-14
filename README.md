@@ -36,6 +36,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Frontend Mentor Price Slider Solution](https://www.frontendmentor.io/solutions/interactive-pricing-component-CP7KeMA6v)
+-   Live Site URL: [helena-p.github.io/price_slider](https://helena-p.github.io/price_slider/)
 
 ## My process
 
