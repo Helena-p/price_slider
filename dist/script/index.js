@@ -47,12 +47,10 @@ function displayFill(event) {
 // Display range of pageviews in 100s K or 1M as max value
 slider.oninput = () => {
     const numberOfViews = (document.querySelector('.js_views'));
-    if (slider.value === slider.max) {
-        return (numberOfViews.textContent = '1M Pageviews');
-    }
-    else {
-        return (numberOfViews.textContent = `${slider.value}K Pageviews`);
-    }
+    numberOfViews.textContent =
+        slider.value === slider.max
+            ? '1M Pageviews'
+            : `${slider.value}K Pageviews`;
 };
 // Apply discount if checkbox is checked
 // Not checked - display regular price
@@ -64,13 +62,13 @@ function calculateDiscount(price) {
         : `$${price}.00`;
 }
 function getPrice(event) {
-    const target = event.target;
-    let views = target.value;
+    const views = event.target.value;
+    let viewNumber = +views;
     options.map((option) => {
-        if (+views == 1000) {
+        if (viewNumber == 1000) {
             return calculateDiscount(36);
         }
-        else if (+views >= option.low && +views < option.high) {
+        else if (viewNumber >= option.low && viewNumber < option.high) {
             return calculateDiscount(option.price);
         }
     });

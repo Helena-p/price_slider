@@ -68,11 +68,10 @@ slider.oninput = () => {
 		document.querySelector('.js_views')
 	);
 
-	if (slider.value === slider.max) {
-		return (numberOfViews.textContent = '1M Pageviews');
-	} else {
-		return (numberOfViews.textContent = `${slider.value}K Pageviews`);
-	}
+	numberOfViews.textContent =
+		slider.value === slider.max
+			? '1M Pageviews'
+			: `${slider.value}K Pageviews`;
 };
 
 // Apply discount if checkbox is checked
@@ -87,13 +86,13 @@ function calculateDiscount(price: number) {
 }
 
 function getPrice(event: Event) {
-	const target = event.target as HTMLInputElement;
-	let views = target.value;
+	const views = (event.target as HTMLInputElement).value;
+	let viewNumber = +views;
 
 	options.map((option) => {
-		if (+views == 1000) {
+		if (viewNumber == 1000) {
 			return calculateDiscount(36);
-		} else if (+views >= option.low && +views < option.high) {
+		} else if (viewNumber >= option.low && viewNumber < option.high) {
 			return calculateDiscount(option.price);
 		}
 	});
