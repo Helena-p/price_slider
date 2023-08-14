@@ -89,7 +89,6 @@ function calculateDiscount(price: number) {
 function getPrice(event: Event) {
 	const target = event.target as HTMLInputElement;
 	let views = target.value;
-	console.log(typeof views);
 
 	options.map((option) => {
 		if (+views == 1000) {
