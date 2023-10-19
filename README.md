@@ -52,6 +52,7 @@ The challenge is small in size, a landing page. I, therefore, decided to build t
 -   Flexbox
 -   CSS Grid
 -   JavaScript
+-   Typescript
 
 ### What I learned
 
